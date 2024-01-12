@@ -1,0 +1,33 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.navegacion {
+  background-color: darken(v.$principal, 25%);
+  padding: 1rem 0;
+  margin: 2rem 0;
+
+  &__contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include m.tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__enlace {
+    font-size: 2.4rem;
+    color: v.$blanco;
+    margin-bottom: 1.2rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include m.tablet {
+      margin-bottom: 0;
+    }
+  }
+}
