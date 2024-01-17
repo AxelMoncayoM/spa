@@ -1,0 +1,28 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.cita {
+  text-align: center;
+  background-image: url(../img/bg_citas.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 7rem 0;
+
+  &__heading {
+    color: v.$blanco;
+    font-size: 6rem;
+  }
+
+  &__texto {
+    color: v.$blanco;
+    max-width: 80rem;
+    margin: 0 auto;
+    line-height: 2;
+  }
+
+  &__enlace {
+    @include m.boton(darken(v.$principal, 20%), v.$blanco);
+    padding: 2rem 10rem;
+  }
+}
